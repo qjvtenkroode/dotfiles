@@ -1,10 +1,10 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Setup pathogen.vim and other plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",Another line 
+" => Setup pathogen.vim and other pluginsnother line nother line 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 execute pathogen#infect()
 
 " EasyMotion
-let g:EasyMotion_leader_key = '<Leader>'
+let g:EasyMotion_leader_key = "<Leader>"
 
 " NERDTree
 " Close when NERDTree is the last window
