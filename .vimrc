@@ -1,14 +1,10 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",Another line 
-" => Setup pathogen.vim and other pluginsnother line nother line 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" => Setup pathogen.vim and other plugins 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 execute pathogen#infect()
 
 " EasyMotion
 let g:EasyMotion_leader_key = "<Leader>"
-
-" NERDTree
-" Close when NERDTree is the last window
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -24,6 +20,8 @@ set number
 
 " Colorscheme stuff
 " set background=light
+set t_Co=256
+let g:solarized_termtrans=1
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
