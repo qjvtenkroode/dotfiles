@@ -1,0 +1,10 @@
+[core]
+    excludesfile = /Users/quincey/.gitignore_global
+    editor = vim
+[user]
+    name = Quincey ten Kroode
+    email = qjv.tenkroode@gmail.com
+[color]
+    ui = true
+[push]
+	default = simple
