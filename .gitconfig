@@ -1,5 +1,5 @@
 [core]
-    excludesfile = /Users/quincey/.gitignore_global
+    excludesfile = ~/.gitignore_global
     editor = vim
 [user]
     name = Quincey ten Kroode
