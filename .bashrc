@@ -5,6 +5,9 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
+## add /usr/local/sbin to PATH
+PATH=$PATH:/usr/local/sbin
+
 TERM=xterm-color
 alias ll='ls -l'
 alias la='ls -la'
