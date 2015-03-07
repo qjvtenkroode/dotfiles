@@ -12,6 +12,8 @@ TERM=xterm-color
 alias ll='ls -l'
 alias la='ls -la'
 alias tmux="TERM=screen-256color-bce tmux"
+alias t='python ~/playground/t/t.py --task-dir ~/.tasks --list private'
+alias tw='python ~/playground/t/t.py --task-dir ~/.tasks --list work'
 
 ## disable those annoying ._ files in when calling tar ##
 export COPYFILE_DISABLE=true
