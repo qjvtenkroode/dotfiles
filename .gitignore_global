@@ -1,0 +1,12 @@
+*~
+.DS_Store
+
+## ignore python stuff
+*.pyc
+*.swp
+*.egg-info
+build
+dist
+
+## ignore coverage files
+.coverage
