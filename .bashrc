@@ -5,6 +5,9 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
+## use vim style
+set -o vi
+
 ## add /usr/local/sbin to PATH
 PATH=$PATH:/usr/local/sbin
 
@@ -13,6 +16,7 @@ alias ll='ls -l'
 alias la='ls -la'
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmuxs="tmux switch -t"
+alias histstats="history | awk '{print \$2 \" \" \$3}'| awk 'BEGIN {FS=\"|\"} {print \$1}'| sort | uniq -c | sort -r | head -n 25"
 
 ## disable those annoying ._ files in when calling tar ##
 export COPYFILE_DISABLE=true
