@@ -12,6 +12,7 @@ TERM=xterm-color
 alias ll='ls -l'
 alias la='ls -la'
 alias tmux="TERM=screen-256color-bce tmux"
+alias tmuxs="tmux switch -t"
 
 ## disable those annoying ._ files in when calling tar ##
 export COPYFILE_DISABLE=true
