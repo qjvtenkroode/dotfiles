@@ -14,8 +14,8 @@ PATH=$PATH:/usr/local/sbin
 TERM=xterm-color
 alias ll='ls -l'
 alias la='ls -la'
-alias tmux="TERM=screen-256color-bce tmux"
-alias tmuxs="tmux switch -t"
+alias tmux='TERM=screen-256color-bce tmux'
+alias tmuxs='tmux switch -t'
 alias histstats="history | awk '{print \$2 \" \" \$3}'| awk 'BEGIN {FS=\"|\"} {print \$1}'| sort | uniq -c | sort -r | head -n 25"
 
 ## disable those annoying ._ files in when calling tar ##
