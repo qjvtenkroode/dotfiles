@@ -32,3 +32,8 @@ export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+
+## Go stuff ##
+export GOROOT="$(brew --prefix golang)/libexec"
+export GOPATH=$HOME/playground/go
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"

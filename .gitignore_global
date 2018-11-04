@@ -10,3 +10,6 @@ dist
 
 ## ignore coverage files
 .coverage
+
+## ignore virtualenv
+env
