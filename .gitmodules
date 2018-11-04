@@ -4,3 +4,15 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/bundle/youcompleteme"]
+	path = .vim/bundle/youcompleteme
+	url = https://github.com/valloric/youcompleteme
