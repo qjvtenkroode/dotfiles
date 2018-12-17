@@ -1,9 +1,6 @@
 [submodule ".vim/bundle/vim-colors-solarized"]
 	path = .vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
@@ -13,9 +10,6 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive
-[submodule ".vim/bundle/youcompleteme"]
-	path = .vim/bundle/youcompleteme
-	url = https://github.com/valloric/youcompleteme
-[submodule ".vim/bundle/CompleteParameter.vim"]
-	path = .vim/bundle/CompleteParameter.vim
-	url = https://github.com/tenfyzhong/CompleteParameter.vim
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go
