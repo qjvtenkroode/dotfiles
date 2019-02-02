@@ -46,23 +46,30 @@ prompt_git() {
 
 			# Check for uncommitted changes in the index.
 			if ! $(git diff --quiet --ignore-submodules --cached); then
-				s+='+';
+				#s+='+';
+                s+='\xe2\x97\x8f';
 			fi;
 
 			# Check for unstaged changes.
 			if ! $(git diff-files --quiet --ignore-submodules --); then
-				s+='!';
+				#s+='!';
+                s+='\xe2\x9c\x9a';
 			fi;
 
 			# Check for untracked files.
 			if [ -n "$(git ls-files --others --exclude-standard)" ]; then
-				s+='?';
+				s+='\xe2\x80\xa6';
 			fi;
 
 			# Check for stashed files.
 			if $(git rev-parse --verify refs/stash &>/dev/null); then
-				s+='$';
+				s+='\xe2\x9a\x91';
 			fi;
+
+            # Check if everything is up to date
+            if [ -z $s ]; then
+                s='\xe2\x9c\x94'
+            fi;
 
 		fi;
 
