@@ -46,13 +46,11 @@ prompt_git() {
 
 			# Check for uncommitted changes in the index.
 			if ! $(git diff --quiet --ignore-submodules --cached); then
-				#s+='+';
                 s+='\xe2\x97\x8f';
 			fi;
 
 			# Check for unstaged changes.
 			if ! $(git diff-files --quiet --ignore-submodules --); then
-				#s+='!';
                 s+='\xe2\x9c\x9a';
 			fi;
 
@@ -88,7 +86,7 @@ prompt_git() {
 	fi;
 }
 
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w \[\033[0m\]~ \$(prompt_git \"\[\033[3;35m\]\" \"\[\033[31;1m\]\") \[\033[0m\]\$ "
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w \[\033[0m\]~ \$(prompt_git \"\[\033[3;35m\]\" \"\[\033[0m\]\[\033[31m\]\") \[\033[0m\]\$ "
 
 ## Go stuff ##
 export GOROOT="$(brew --prefix golang)/libexec"
