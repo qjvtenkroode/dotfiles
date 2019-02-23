@@ -4,6 +4,11 @@
 execute pathogen#infect()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Leader
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = ","
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
@@ -24,8 +29,8 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " Search highlighting and toggles
-:set hlsearch
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+set hlsearch
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -58,3 +63,19 @@ map <S-e> :w<CR>:!clear<CR>:!python %<CR>
 " => NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Golang
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"map <C-n> :cnext<CR>
+"map <C-m> :cprevious<CR>
+"nnoremap <leader>a :cclose<CR>
+set autowrite
+
+let g:go_metalinter_autosave = 1
+let g:go_fmt_command = "goimports"
+
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <leader>c  <Plug>(go-coverage-toggle)
