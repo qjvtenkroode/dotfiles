@@ -73,6 +73,7 @@ map <C-n> :NERDTreeToggle<CR>
 set autowrite
 
 let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'test']
 let g:go_fmt_command = "goimports"
 
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
