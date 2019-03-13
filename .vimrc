@@ -72,8 +72,14 @@ map <C-n> :NERDTreeToggle<CR>
 "nnoremap <leader>a :cclose<CR>
 set autowrite
 
+" Build/Test on save.
+augroup auto_go
+	autocmd!
+	autocmd BufWritePost *.go :GoTest
+augroup end
+
 let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'test']
+let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
 let g:go_fmt_command = "goimports"
 
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
