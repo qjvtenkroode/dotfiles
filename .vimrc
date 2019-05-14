@@ -73,10 +73,10 @@ map <C-n> :NERDTreeToggle<CR>
 set autowrite
 
 " Build/Test on save.
-augroup auto_go
-	autocmd!
-	autocmd BufWritePost *.go :GoTest
-augroup end
+"augroup auto_go
+"	autocmd!
+"	autocmd BufWritePost *.go :GoTest
+"augroup end
 
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
