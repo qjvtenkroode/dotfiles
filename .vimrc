@@ -86,3 +86,10 @@ autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <leader>c  <Plug>(go-coverage-toggle)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => HTML, JS, Vue
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType html :setlocal sw=2 ts=2
+autocmd FileType js :setlocal sw=2 ts=2
+autocmd FileType vue :setlocal sw=2 ts=2
