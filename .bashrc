@@ -27,10 +27,6 @@ export LSCOLORS='cxfxcxdxbxegedabagacad'
 ## grep with color ##
 export GREP_OPTIONS='--color=auto'
 
-## pip ##
-export PIP_REQUIRE_VIRTUALENV=true
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
-
 prompt_git() {
 	local s='';
 	local branchName='';
@@ -89,6 +85,5 @@ prompt_git() {
 export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W \[\033[0m\]~ \$(prompt_git \"\[\033[3;35m\]\" \"\[\033[0m\]\[\033[31m\]\") \[\033[0m\]\$ "
 
 ## Go stuff ##
-export GOROOT="$(brew --prefix golang)/libexec"
 export GOPATH=$HOME/playground/go
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"

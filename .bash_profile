@@ -1,4 +1,9 @@
-if [ -f ~/.bashrc ]; then
-    source ~/.bashrc
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    exec startx
 fi
-export PATH=/usr/local/bin:$PATH
