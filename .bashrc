@@ -24,8 +24,6 @@ export COPYFILE_DISABLE=true
 ## Colors ##
 export CLICOLOR=1
 export LSCOLORS='cxfxcxdxbxegedabagacad'
-## grep with color ##
-export GREP_OPTIONS='--color=auto'
 
 prompt_git() {
 	local s='';
@@ -87,3 +85,7 @@ export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W \[\033[0m\]
 ## Go stuff ##
 export GOPATH=$HOME/playground/go
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+## GPG
+export GPG_TTY=`tty`
+

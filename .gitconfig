@@ -4,6 +4,7 @@
 [user]
     name = Quincey ten Kroode
     email = dev.qkroode@gmail.com
+	signingkey = 898FC17010E3748E
 [color]
     ui = true
 [push]
@@ -11,3 +12,5 @@
 [alias]
     lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lga = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+[commit]
+	gpgsign = true
