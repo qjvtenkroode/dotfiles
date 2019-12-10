@@ -10,6 +10,8 @@ set -o vi
 
 ## add /usr/local/sbin to PATH
 PATH=$PATH:/usr/local/sbin
+## add /home/quincey/.scripts to PATH
+PATH=$PATH:/home/quincey/.scripts
 
 TERM=xterm-color
 alias ll='ls -l'
