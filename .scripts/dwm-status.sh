@@ -15,7 +15,7 @@ do
     diskp1=$(echo $disks | awk '{ print $5 }')
     diskl2=$(echo $disks | awk '{ print $12 }')
     diskp2=$(echo $disks | awk '{ print $11 }')
-    
+
     xsetroot -name "$diskl1:$diskp1 $diskl2:$diskp2 | $t | $d | $h";
-    sleep 0.1;
+    sleep 1s;
 done;
