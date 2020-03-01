@@ -78,15 +78,8 @@ set autowrite
 "	autocmd BufWritePost *.go :GoTest
 "augroup end
 
-" Do autocompletion popup for go
-function! OpenCompletion()
-    if !pumvisible() && ((v:char >= 'a' && v:char <= 'z') || (v:char >= 'A' && v:char <= 'Z'))
-        call feedkeys("\<C-x>\<C-o>", "n")
-    endif
-endfunction
-
-autocmd FileType go
-    \ autocmd InsertCharPre * call OpenCompletion()
+" Do autocompletion popup for go after a dot
+autocmd FileType go inoremap <buffer> . .<C-x><C-o>
 
 " Do not insert autocomplete strings automagically..
 set completeopt+=menuone,noselect,noinsert
@@ -97,6 +90,9 @@ let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
 let g:go_gopls_complete_unimported = 1
+
+" keymap GoAlternate to :A
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 
 autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
