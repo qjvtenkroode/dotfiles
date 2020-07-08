@@ -73,10 +73,10 @@ map <C-n> :NERDTreeToggle<CR>
 set autowrite
 
 " Build/Test on save.
-"augroup auto_go
-"	autocmd!
-"	autocmd BufWritePost *.go :GoTest
-"augroup end
+augroup auto_go
+	autocmd!
+	autocmd BufWritePost *.go :GoTest
+augroup end
 
 " Do autocompletion popup for go after a dot
 autocmd FileType go inoremap <buffer> . .<C-x><C-o>
@@ -84,8 +84,8 @@ autocmd FileType go inoremap <buffer> . .<C-x><C-o>
 " Do not insert autocomplete strings automagically..
 set completeopt+=menuone,noselect,noinsert
 
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck']
+"let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_fmt_command = "goimports"
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 1
@@ -98,6 +98,9 @@ autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 autocmd FileType go nmap <leader>t  <Plug>(go-test)
 autocmd FileType go nmap <leader>c  <Plug>(go-coverage-toggle)
+
+" Keymap Leader / to close all locationlists and quickfix windows
+autocmd FileType go nmap <leader>/ :windo lcl\|ccl<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => HTML, JS, Vue
