@@ -3,7 +3,7 @@
     editor = vim
 [user]
     name = Quincey ten Kroode
-    email = dev.qkroode@gmail.com
+    email = qjv.tenkroode@gmail.com
 	signingkey = 898FC17010E3748E
 [color]
     ui = true

@@ -89,6 +89,7 @@ export GOPATH=$HOME/playground/go
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin:~/.local/bin"
 
 ## GPG
-export GPG_TTY=`tty`
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
 
 export DISPLAY=:0
