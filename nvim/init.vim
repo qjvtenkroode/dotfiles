@@ -1,6 +1,9 @@
 "------------------------------- Plugins -------------------------------
 call plug#begin()
+    "-------- Colors -------
     Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+    "-------- Syntax -------
+    Plug 'jvirtanen/vim-hcl'
 call plug#end()
 "------------------------------- General -------------------------------
 let g:tokyonight_style = "night"
