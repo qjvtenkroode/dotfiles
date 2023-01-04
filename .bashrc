@@ -93,3 +93,9 @@ export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 export DISPLAY=:0
+
+complete -C /usr/local/bin/mc mc
+
+## Deno ##
+export DENO_INSTALL="/home/quincey/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
