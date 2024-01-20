@@ -1,29 +1,18 @@
--- Plugins
-require('plugins')
+-- Lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable", -- latest stable release
+        lazypath,
+    })
+end
+vim.opt.rtp:prepend(lazypath)
 
--- General
-vim.g.mapleader = ','
-vim.g.tokyonight_style = 'night'
-vim.opt.cursorline = true         -- show line where cursor is
-vim.opt.encoding = 'utf8'         -- use utf8 encoding
-vim.opt.expandtab = true          -- use spaces instead of tabs
-vim.opt.ignorecase = true         -- ignore case with search
-vim.opt.ruler = false             -- no ruler, use statusline
-vim.opt.rnu = true                -- relative linenumbers
-vim.opt.scrolloff=3               -- keep three lines before and after cursor
-vim.opt.shiftwidth=4              -- 4 spaces for autoindent
-vim.opt.showcmd = true            -- show incomplete commands
-vim.opt.showmatch = true          -- show matching brackets
-vim.opt.smarttab = true           -- be smart with using tabs
-vim.opt.softtabstop=4             -- multiple spaces as tabstop
-  -- statusline
-vim.opt.statusline = '%m %y %r %F %= %c:%l %L %p%% [%n]' -- modified; filetype; readonly; full file path; right side; column, linenumber / maximum linenumber; percentage of file; buffer number
-vim.opt.tabstop=4                 -- 1 tab == 4 spaces
-  -- Highlighting and Indentation
-local map = vim.api.nvim_set_keymap
-map('n', '<Space>', ':nohlsearch<Bar>:echo<CR>', {noremap = true, silent = true})  -- pressing spacebar removes the highlight
+local opts = {}
 
--- vim.cmd[[colorscheme tokyonight]]
-
--- LSP config
-require('lsp_config')
+require("vim-options")
+require("lazy").setup("plugins")
